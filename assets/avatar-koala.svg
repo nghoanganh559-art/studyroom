@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Koala avatar">
+  <rect width="240" height="240" rx="40" fill="#cfd5dc"/>
+  <circle cx="68" cy="95" r="38" fill="#8d98a3"/>
+  <circle cx="172" cy="95" r="38" fill="#8d98a3"/>
+  <circle cx="68" cy="95" r="22" fill="#e9edf0"/>
+  <circle cx="172" cy="95" r="22" fill="#e9edf0"/>
+  <circle cx="120" cy="126" r="78" fill="#aab3bd"/>
+  <ellipse cx="120" cy="164" rx="58" ry="38" fill="#eef1f3"/>
+  <circle cx="88" cy="118" r="21" fill="#111"/>
+  <circle cx="152" cy="118" r="21" fill="#111"/>
+  <circle cx="98" cy="106" r="7" fill="#fff"/>
+  <circle cx="162" cy="106" r="7" fill="#fff"/>
+  <ellipse cx="120" cy="147" rx="18" ry="24" fill="#202124"/>
+  <path d="M103 178c12 9 22 9 34 0" fill="none" stroke="#202124" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="78" cy="150" r="12" fill="#f0a5b9" opacity=".72"/>
+  <circle cx="162" cy="150" r="12" fill="#f0a5b9" opacity=".72"/>
+</svg>

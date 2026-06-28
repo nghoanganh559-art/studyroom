@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Bear avatar">
+  <rect width="240" height="240" rx="40" fill="#f7dea7"/>
+  <circle cx="68" cy="86" r="30" fill="#d99655"/>
+  <circle cx="172" cy="86" r="30" fill="#d99655"/>
+  <circle cx="120" cy="122" r="74" fill="#de9d5c"/>
+  <ellipse cx="120" cy="152" rx="56" ry="42" fill="#f7d4a3"/>
+  <path d="M94 76c10-28 43-34 65-16 13 10 22 28 20 49-12-14-31-21-55-21-20 0-35 4-45 12 0-9 4-18 15-24z" fill="#efa95f"/>
+  <path d="M85 65c-12 16-12 38 0 55m70-59c16 13 21 33 13 57" fill="none" stroke="#9b5937" stroke-width="12" stroke-linecap="round"/>
+  <g transform="translate(0 6)">
+    <circle cx="83" cy="112" r="41" fill="#2d2f34"/>
+    <circle cx="157" cy="112" r="41" fill="#2d2f34"/>
+    <circle cx="83" cy="112" r="32" fill="#d9e0e6" opacity=".58"/>
+    <circle cx="157" cy="112" r="32" fill="#d9e0e6" opacity=".58"/>
+    <path d="M119 112h2" stroke="#9fb2c8" stroke-width="16" stroke-linecap="round"/>
+    <path d="M45 112h-12m174 0h-12" stroke="#9fb2c8" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="70" cy="94" r="8" fill="#fff" opacity=".65"/>
+    <circle cx="144" cy="94" r="8" fill="#fff" opacity=".65"/>
+  </g>
+  <ellipse cx="120" cy="148" rx="16" ry="13" fill="#9b4d2b"/>
+  <path d="M88 178c8 14 56 14 64 0" fill="#250711"/>
+  <rect x="108" y="168" width="24" height="24" rx="8" fill="#fff"/>
+</svg>

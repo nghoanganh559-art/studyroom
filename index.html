@@ -1,0 +1,312 @@
+﻿<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Study Chill Rooms</title>
+    <link rel="stylesheet" href="styles.css?v=20260628-mobile-kick-small" />
+  </head>
+  <body>
+    <main class="app-shell" id="appShell">
+      <section class="stage" aria-label="Khu vực học nhóm">
+        <header class="topbar">
+          <div class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <div>
+              <strong>Study Chill</strong>
+              <span id="connectionText">Chọn hoặc tạo góc học để bắt đầu</span>
+            </div>
+          </div>
+
+          <div class="user-strip">
+            <div class="theme-switch" aria-label="Chọn nền giao diện">
+              <button id="themeLightButton" type="button" data-theme-choice="light" aria-label="Nền sáng">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4a1 1 0 0 0 1-1V1h-2v2a1 1 0 0 0 1 1Zm0 16a1 1 0 0 0-1 1v2h2v-2a1 1 0 0 0-1-1ZM4 12a1 1 0 0 0-1-1H1v2h2a1 1 0 0 0 1-1Zm19-1h-2a1 1 0 1 0 0 2h2v-2ZM5.64 4.22 4.22 5.64l1.42 1.42 1.42-1.42-1.42-1.42Zm12.72 12.72-1.42 1.42 1.42 1.42 1.42-1.42-1.42-1.42Zm1.42-11.3-1.42-1.42-1.42 1.42 1.42 1.42 1.42-1.42ZM4.22 18.36l1.42 1.42 1.42-1.42-1.42-1.42-1.42 1.42ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg>
+              </button>
+              <button id="themeDarkButton" type="button" data-theme-choice="dark" aria-label="Nền tối">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <defs>
+                    <filter id="themeStarBlur">
+                      <feGaussianBlur stdDeviation="0.45" />
+                    </filter>
+                  </defs>
+                  <path d="M18.7 15.9A7.6 7.6 0 0 1 8.1 5.3 8.3 8.3 0 1 0 18.7 15.9Z"/>
+                  <g opacity="0.56" filter="url(#themeStarBlur)">
+                    <path d="m13.9 6.5 1.2-2.4 1.2 2.4 2.4 1.2-2.4 1.2-1.2 2.4-1.2-2.4-2.4-1.2 2.4-1.2Z"/>
+                    <path d="m19 10.2.8-1.6.8 1.6 1.6.8-1.6.8-.8 1.6-.8-1.6-1.6-.8 1.6-.8Z"/>
+                  </g>
+                </svg>
+              </button>
+            </div>
+            <label class="user-field" for="globalUserName">
+              Tên học cùng
+              <input id="globalUserName" type="text" placeholder="VD: Minh Anh" maxlength="28" />
+            </label>
+          </div>
+        </header>
+
+        <div class="meeting-board" id="meetingBoard">
+          <div class="floating-study-bg" aria-hidden="true">
+            <span class="float-item float-note float-a"></span>
+            <span class="float-item float-pencil float-b"></span>
+            <span class="float-item float-card float-c"></span>
+            <span class="float-item float-dot float-d"></span>
+            <span class="float-item float-rule float-e"></span>
+            <span class="float-item float-note float-f"></span>
+            <span class="float-item float-pencil float-g"></span>
+            <span class="float-item float-card float-h"></span>
+            <span class="float-item float-dot float-i"></span>
+            <span class="float-item float-rule float-j"></span>
+          </div>
+          <div class="empty-state" id="emptyState">
+            <div class="movie-ticket study-banner" aria-hidden="true">
+              <div class="ticket-main">
+                <div class="ticket-art study-supplies">
+                  <span class="study-notebook"></span>
+                  <span class="study-pencil"></span>
+                  <span class="study-eraser"></span>
+                  <span class="study-note note-a"></span>
+                  <span class="study-note note-b"></span>
+                  <span class="study-spark spark-a"></span>
+                  <span class="study-spark spark-b"></span>
+                </div>
+                <div class="ticket-copy">
+                  <span>Focus Room</span>
+                  <strong>Study</strong>
+                  <em>Learn Together</em>
+                </div>
+              </div>
+              <div class="ticket-stub">
+                <span class="barcode"></span>
+                <small>1234567890</small>
+              </div>
+            </div>
+            <h1><span id="heroTitle">Góc học chung, vào nhanh bằng mật khẩu</span><span class="type-caret" aria-hidden="true"></span></h1>
+            <p id="heroSubtitle">Tạo một room nhỏ để học cùng nhau, bật cam/mic khi cần và share màn hình bài tập thật nhanh.</p>
+          </div>
+
+          <div class="room-view is-hidden" id="roomView">
+            <div class="video-grid" id="videoGrid"></div>
+            <div class="meeting-info">
+              <div>
+                <span>Tên phòng:</span>
+                <strong id="activeRoomName">-</strong>
+              </div>
+              <div>
+                <span>Người tham gia:</span>
+                <strong id="participantCount">0</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="room-chat-panel is-hidden" id="roomChatPanel" aria-label="Chat trong phòng">
+          <div class="chat-header">
+            <strong>Chat phòng</strong>
+            <div class="chat-header-actions">
+              <button class="icon-btn chat-close" id="closeChatButton" type="button" title="Đóng chat">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 12.6 12.6-1.4 1.4L5 6.4 6.4 5Zm11.2 0L19 6.4 6.4 19 5 17.6 17.6 5Z"/></svg>
+              </button>
+            </div>
+          </div>
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"></div>
+          <form class="chat-form" id="chatForm" autocomplete="off">
+            <input id="chatInput" type="text" maxlength="240" placeholder="Nhập tin nhắn" />
+            <div class="chat-menu-wrap" id="chatMenuWrap">
+              <button class="icon-btn chat-menu-button" id="chatMenuButton" type="button" title="Công cụ chat" aria-expanded="false">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6V5Z"/></svg>
+              </button>
+              <div class="chat-tool-menu is-hidden" id="chatToolMenu">
+                <button type="button" id="createPollButton">Bình chọn</button>
+                <button type="button" id="randomSpinButton">Bốc thăm</button>
+              </div>
+            </div>
+            <button class="chat-send" type="submit" title="Gửi tin nhắn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20 21 12 3 4v6l10 2-10 2v6Z"/></svg>
+            </button>
+          </form>
+        </section>
+
+        <footer class="controls is-hidden" id="meetingControls" aria-label="Điều khiển buổi học">
+          <button class="control-btn chat-toggle" id="chatButton" type="button" aria-expanded="false" title="Chat phòng">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-5.6L12 21l-2.4-3H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v9h6.6l1.4 1.8 1.4-1.8H20V7H4Z"/></svg>
+            <span class="chat-unread is-hidden" id="chatUnread">0</span>
+          </button>
+          <button class="control-btn" id="micButton" type="button" aria-pressed="false" title="Bật/tắt mic">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 14a3 3 0 0 0 3-3V6a3 3 0 1 0-6 0v5a3 3 0 0 0 3 3Zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2Z"/></svg>
+          </button>
+          <button class="control-btn" id="cameraButton" type="button" aria-pressed="false" title="Bật/tắt camera">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10a2 2 0 0 1 2 2v1.2l4-2.4V17l-4-2.4V16a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z"/></svg>
+          </button>
+          <button class="control-btn share" id="screenButton" type="button" aria-pressed="false" title="Trình chiếu màn hình">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-6v2h-4v-2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v10h16V7H4Zm8 2 4 4h-3v3h-2v-3H8l4-4Z"/></svg>
+          </button>
+          <button class="control-btn leave" id="leaveButton" type="button" title="Rời phòng">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-8v-2h8V6h-8V4Zm-1.6 4.4L12 12l-3.6 3.6L7 14.2 8.8 13H2v-2h6.8L7 9.8l1.4-1.4Z"/></svg>
+          </button>
+          <span class="media-status" id="mediaStatus" role="status"></span>
+        </footer>
+      </section>
+
+      <aside class="rooms-panel" id="roomsPanel" aria-label="Danh sách phòng">
+        <div class="panel-header">
+          <div>
+            <span>Phòng đang có</span>
+            <strong id="roomTotal">0 phòng</strong>
+          </div>
+          <div class="panel-actions">
+            <button class="icon-btn" id="openCreateRoomButton" type="button" title="Tạo phòng">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6V5Z"/></svg>
+            </button>
+            <button class="icon-btn is-hidden" id="clearRoomsButton" type="button" title="Xóa tất cả phòng">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l1 2h4v2H4V5h4l1-2Zm-2 6h10l-.7 11H7.7L7 9Z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <label class="search-room">
+          Tìm phòng
+          <input id="roomSearch" type="text" placeholder="Nhập tên phòng" autocomplete="off" />
+        </label>
+
+        <div class="room-list" id="roomList"></div>
+      </aside>
+    </main>
+
+    <dialog id="createRoomDialog" class="sheet-dialog">
+      <form class="dialog-card create-room" id="createRoomForm" autocomplete="off">
+        <button class="icon-btn close-dialog" id="closeCreateRoomDialog" type="button" title="Đóng">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 12.6 12.6-1.4 1.4L5 6.4 6.4 5Zm11.2 0L19 6.4 6.4 19 5 17.6 17.6 5Z"/></svg>
+        </button>
+        <h2>Tạo phòng</h2>
+          <label>
+            Tên phòng
+            <input id="roomName" type="text" placeholder="VD: Toán tối nay" maxlength="36" required />
+            <span class="field-error" id="createNameError" role="alert"></span>
+          </label>
+          <label>
+            Mật khẩu phòng
+            <input
+              id="roomPassword"
+              type="text"
+              class="masked-input"
+              placeholder="Bỏ qua nếu không cần"
+              minlength="3"
+              maxlength="32"
+              autocomplete="new-password"
+              spellcheck="false"
+              data-lpignore="true"
+              data-1p-ignore
+            />
+            <span class="field-error" id="createPasswordError" role="alert"></span>
+          </label>
+          <div class="avatar-select dialog-avatar-select" id="createAvatarPicker" role="radiogroup" aria-label="Chọn avatar"></div>
+          <button class="primary-btn" type="submit">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6V5Z"/></svg>
+            Tạo phòng
+          </button>
+        </form>
+    </dialog>
+
+    <dialog id="joinDialog">
+      <form class="dialog-card" id="joinForm" autocomplete="off">
+        <button class="icon-btn close-dialog" id="closeJoinDialog" type="button" title="Đóng">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 12.6 12.6-1.4 1.4L5 6.4 6.4 5Zm11.2 0L19 6.4 6.4 19 5 17.6 17.6 5Z"/></svg>
+        </button>
+        <h2>Vào phòng</h2>
+        <p id="joinRoomLabel">Nhập mật khẩu để tham gia.</p>
+        <label>
+          Tên học cùng
+          <input id="joinUserName" type="text" maxlength="28" autocomplete="off" required />
+        </label>
+        <label id="joinPasswordLabel">
+          Mật khẩu
+          <input
+            id="joinPassword"
+            type="text"
+            class="masked-input"
+            maxlength="32"
+            autocomplete="new-password"
+            spellcheck="false"
+            data-lpignore="true"
+            data-1p-ignore
+          />
+          <span class="field-error" id="joinPasswordError" role="alert"></span>
+        </label>
+        <div class="avatar-select dialog-avatar-select" id="joinAvatarPicker" role="radiogroup" aria-label="Chọn avatar"></div>
+        <span class="form-error" id="joinError" role="alert"></span>
+        <button class="primary-btn" value="default" type="submit">Vào phòng</button>
+      </form>
+    </dialog>
+
+    <dialog id="pollDialog">
+      <form class="dialog-card poll-dialog-card" id="pollForm" autocomplete="off">
+        <button class="icon-btn close-dialog" id="closePollDialog" type="button" title="Đóng">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 12.6 12.6-1.4 1.4L5 6.4 6.4 5Zm11.2 0L19 6.4 6.4 19 5 17.6 17.6 5Z"/></svg>
+        </button>
+        <h2>Tạo bình chọn</h2>
+        <label>
+          Câu hỏi
+          <input id="pollQuestion" type="text" maxlength="120" placeholder="VD: Học bài nào trước?" required />
+        </label>
+        <label>
+          Lựa chọn
+          <input id="pollOptions" type="text" maxlength="240" placeholder="VD: Toán, Lý, Hóa" required />
+          <span class="field-hint">Nhập ít nhất 2 lựa chọn, cách nhau bằng dấu phẩy.</span>
+          <span class="field-error" id="pollError" role="alert"></span>
+        </label>
+        <button class="primary-btn" type="submit">Xác nhận</button>
+      </form>
+    </dialog>
+
+    <dialog id="spinDialog">
+      <form class="dialog-card spin-dialog-card" id="spinForm" autocomplete="off">
+        <button class="icon-btn close-dialog" id="closeSpinDialog" type="button" title="Đóng">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 12.6 12.6-1.4 1.4L5 6.4 6.4 5Zm11.2 0L19 6.4 6.4 19 5 17.6 17.6 5Z"/></svg>
+        </button>
+        <h2>Bốc thăm</h2>
+        <label>
+          Nội dung bốc thăm
+          <input id="spinPrompt" type="text" maxlength="120" placeholder="VD: Ai trả lời câu này?" required />
+          <span class="field-hint">Bốc thăm sẽ chọn ngẫu nhiên một người trong phòng.</span>
+        </label>
+        <button class="primary-btn" type="submit">Xác nhận</button>
+      </form>
+    </dialog>
+
+    <dialog id="kickDialog">
+      <form class="dialog-card kick-dialog-card" id="kickForm" autocomplete="off">
+        <button class="icon-btn close-dialog" id="closeKickDialog" type="button" title="Đóng">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 12.6 12.6-1.4 1.4L5 6.4 6.4 5Zm11.2 0L19 6.4 6.4 19 5 17.6 17.6 5Z"/></svg>
+        </button>
+        <h2 id="kickDialogTitle">Mời người này khỏi phòng?</h2>
+        <div class="kick-duration-grid" id="kickDurationGrid" aria-label="Chọn thời gian mời khỏi phòng">
+          <button type="button" data-kick-minutes="1">1 phút</button>
+          <button type="button" data-kick-minutes="2">2 phút</button>
+          <button type="button" data-kick-minutes="5">5 phút</button>
+          <button type="button" data-kick-minutes="10">10 phút</button>
+          <button type="button" data-kick-minutes="15">15 phút</button>
+          <button type="button" data-kick-mode="permanent">Vĩnh viễn</button>
+        </div>
+        <label>
+          Số phút khác
+          <input id="kickCustomMinutes" type="number" min="1" max="1440" step="1" placeholder="Nhập số phút" />
+          <span class="field-error" id="kickError" role="alert"></span>
+        </label>
+        <div class="kick-dialog-actions">
+          <button class="primary-btn" type="submit">Xác nhận</button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog id="banNoticeDialog">
+      <form class="dialog-card ban-notice-card" method="dialog">
+        <h2>Không thể vào phòng</h2>
+        <p id="banNoticeText">Hãy thử lại sau khi thời gian chặn kết thúc.</p>
+        <button class="primary-btn" type="submit">Đã hiểu</button>
+      </form>
+    </dialog>
+
+    <script src="app.js?v=20260628-mobile-safari-cleanup"></script>
+  </body>
+</html>

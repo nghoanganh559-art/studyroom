@@ -1,0 +1,14 @@
+{
+  "name": "study-chill-rooms",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small room-based study meeting web app with chat, polls, and random draw.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED"
+}

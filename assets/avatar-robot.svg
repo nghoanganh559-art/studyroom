@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Robot avatar">
+  <rect width="240" height="240" rx="40" fill="#c3d8ff"/>
+  <path d="M116 42h8v28h-8z" fill="#3f4a5a"/>
+  <circle cx="120" cy="37" r="12" fill="#ffcc4d"/>
+  <rect x="47" y="74" width="146" height="122" rx="34" fill="#6f8094"/>
+  <rect x="62" y="91" width="116" height="82" rx="20" fill="#e7f0ff"/>
+  <circle cx="89" cy="127" r="20" fill="#1b2430"/>
+  <circle cx="151" cy="127" r="20" fill="#1b2430"/>
+  <circle cx="96" cy="119" r="6" fill="#fff"/>
+  <circle cx="158" cy="119" r="6" fill="#fff"/>
+  <path d="M91 156h58" stroke="#1b2430" stroke-width="10" stroke-linecap="round"/>
+  <path d="M41 112H21m198 0h-20" stroke="#6f8094" stroke-width="16" stroke-linecap="round"/>
+  <path d="M79 205h82" stroke="#3f4a5a" stroke-width="14" stroke-linecap="round"/>
+</svg>

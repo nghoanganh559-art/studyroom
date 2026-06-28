@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Bunny avatar">
+  <rect width="240" height="240" rx="40" fill="#8149cf"/>
+  <path d="M79 92 56 30c-6-17 14-26 25-11l29 58zm82 0 23-62c6-17-14-26-25-11l-29 58z" fill="#ece8ff"/>
+  <path d="M77 78 64 38l30 35zm86 0 13-40-30 35z" fill="#f0a6ba"/>
+  <circle cx="120" cy="129" r="74" fill="#ebe8ff"/>
+  <ellipse cx="120" cy="160" rx="58" ry="43" fill="#f7f8ff"/>
+  <circle cx="91" cy="118" r="21" fill="#171717"/>
+  <circle cx="149" cy="118" r="21" fill="#171717"/>
+  <circle cx="100" cy="104" r="7" fill="#fff"/>
+  <circle cx="158" cy="104" r="7" fill="#fff"/>
+  <ellipse cx="120" cy="146" rx="15" ry="10" fill="#ef94b4"/>
+  <path d="M96 178c13 18 35 18 48 0" fill="#550813"/>
+  <rect x="108" y="171" width="24" height="22" rx="7" fill="#fff"/>
+  <path d="M78 149c-18-6-38-4-58 5M78 166c-19 0-37 6-55 17M162 149c18-6 38-4 58 5M162 166c19 0 37 6 55 17" fill="none" stroke="#d8d5ed" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="76" cy="151" r="22" fill="#e5e1fa"/>
+  <circle cx="164" cy="151" r="22" fill="#e5e1fa"/>
+</svg>

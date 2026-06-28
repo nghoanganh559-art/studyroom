@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Cat avatar">
+  <rect width="240" height="240" rx="40" fill="#df83b2"/>
+  <path d="M60 86 34 32c-4-8 5-16 13-10l45 35zm120 0 26-54c4-8-5-16-13-10l-45 35z" fill="#75d1ea"/>
+  <path d="M62 77 47 42l30 24zm116 0 15-35-30 24z" fill="#e68aba"/>
+  <circle cx="120" cy="125" r="78" fill="#75d1ea"/>
+  <ellipse cx="120" cy="157" rx="65" ry="45" fill="#f8fbfb"/>
+  <circle cx="85" cy="117" r="25" fill="#111"/>
+  <circle cx="155" cy="117" r="25" fill="#111"/>
+  <circle cx="96" cy="102" r="8" fill="#fff"/>
+  <circle cx="166" cy="102" r="8" fill="#fff"/>
+  <path d="M104 150c9-10 23-10 32 0" fill="#f2a1cc"/>
+  <ellipse cx="120" cy="143" rx="14" ry="10" fill="#e979ac"/>
+  <path d="M95 172c12 15 38 15 50 0" fill="#230812"/>
+  <path d="M78 149c-19-7-41-5-61 5M78 166c-20 1-39 7-57 19M162 149c19-7 41-5 61 5M162 166c20 1 39 7 57 19" fill="none" stroke="#58bfe0" stroke-width="8" stroke-linecap="round"/>
+  <path d="M76 201h88" stroke="#d71934" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="120" cy="212" r="14" fill="#f2cc20"/>
+</svg>

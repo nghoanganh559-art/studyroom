@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Monkey avatar">
+  <rect width="240" height="240" rx="40" fill="#4a96df"/>
+  <circle cx="58" cy="111" r="28" fill="#c97837"/>
+  <circle cx="182" cy="111" r="28" fill="#c97837"/>
+  <circle cx="120" cy="123" r="76" fill="#b76532"/>
+  <path d="M70 108c10-44 90-44 100 0-23-16-77-16-100 0z" fill="#f0c36d"/>
+  <ellipse cx="120" cy="145" rx="58" ry="42" fill="#f0c36d"/>
+  <path d="M78 110h84" stroke="#141414" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="88" cy="113" r="34" fill="#090909"/>
+  <circle cx="152" cy="113" r="34" fill="#090909"/>
+  <circle cx="77" cy="99" r="8" fill="#fff" opacity=".7"/>
+  <circle cx="141" cy="99" r="8" fill="#fff" opacity=".7"/>
+  <path d="M104 142c5-7 8-7 13 0m6 0c5-7 8-7 13 0" fill="none" stroke="#a35829" stroke-width="7" stroke-linecap="round"/>
+  <path d="M93 168c13 11 41 11 54 0" fill="#230812"/>
+  <path d="M34 111c-4-32 15-49 34-42m138 42c4-32-15-49-34-42" fill="none" stroke="#b76532" stroke-width="20" stroke-linecap="round"/>
+  <path d="M87 71c8-8 16-10 25-6m41 6c-8-8-16-10-25-6" fill="none" stroke="#8d4a25" stroke-width="8" stroke-linecap="round"/>
+</svg>

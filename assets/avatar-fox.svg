@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-label="Fox avatar">
+  <rect width="240" height="240" rx="40" fill="#ffb15d"/>
+  <path d="M64 88 41 29c-3-8 6-15 13-10l49 37Zm112 0 23-59c3-8-6-15-13-10l-49 37Z" fill="#df6f28"/>
+  <path d="M63 75 52 43l28 20Zm114 0 11-32-28 20Z" fill="#ffe3b5"/>
+  <circle cx="120" cy="126" r="78" fill="#e9782c"/>
+  <path d="M61 116c32 23 45 58 59 88 14-30 27-65 59-88-6 55-31 88-59 88s-53-33-59-88Z" fill="#fff1dd"/>
+  <circle cx="88" cy="116" r="22" fill="#111"/>
+  <circle cx="152" cy="116" r="22" fill="#111"/>
+  <circle cx="98" cy="103" r="7" fill="#fff"/>
+  <circle cx="162" cy="103" r="7" fill="#fff"/>
+  <ellipse cx="120" cy="149" rx="15" ry="10" fill="#1d0d08"/>
+  <path d="M104 169c11 10 21 10 32 0" fill="none" stroke="#1d0d08" stroke-width="8" stroke-linecap="round"/>
+</svg>
